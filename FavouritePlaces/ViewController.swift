@@ -32,13 +32,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         
-        cell.textLabel?.text = restaurantNames[indexPath.row]
-      
-        cell.imageView?.image = UIImage(named: imageNames[indexPath.row])
+        cell.myLabelName.text = restaurantNames[indexPath.row]
+        cell.myImage.image = UIImage(named: imageNames[indexPath.row])
+        cell.myImage.layer.cornerRadius = cell.myImage.frame.height / 2
+        cell.myImage.contentMode = .scaleAspectFill
+        cell.myLabelName.clipsToBounds = true
         
         return cell
+    }
+    
+    
+    //MARK: Table view delegate
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
     }
     
 
