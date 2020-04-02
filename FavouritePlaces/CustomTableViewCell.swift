@@ -10,12 +10,14 @@ import UIKit
 
 class CustomTableViewCell: UITableViewCell {
 
-    
-    
+
     @IBOutlet weak var myLabelType: UILabel!
     @IBOutlet weak var myLabelLocation: UILabel!
     @IBOutlet weak var myLabelName: UILabel!
     @IBOutlet weak var myImage: UIImageView!
+    
+    
+    
     
     
     override func awakeFromNib() {
