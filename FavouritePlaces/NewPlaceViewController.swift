@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class NewPlaceViewController: UITableViewController {
     
@@ -19,6 +20,10 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var imageOfPlace: UIImageView!
     @IBOutlet weak var ratingControll: RatingControll!
+    
+    @IBOutlet weak var cosmosView: CosmosView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

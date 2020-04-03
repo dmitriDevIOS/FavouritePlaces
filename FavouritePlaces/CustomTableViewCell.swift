@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class CustomTableViewCell: UITableViewCell {
 
@@ -17,6 +18,7 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var myImage: UIImageView!
     
     
+    @IBOutlet weak var cosmosView: CosmosView!
     
     
     
